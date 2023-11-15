@@ -156,21 +156,20 @@ MonoBehaviour:
   t:
     _inputKey: 0
     _OnEventFX:
-      _target: {fileID: 1888120367}
-      _methodName: CompareTag
-      _args:
-      - boolValue: 0
-        intValue: 0
-        floatValue: 0
-        stringValue: 
-        objectValue: {fileID: 0}
-        argType: 4
-        _typeName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-      _dynamic: 0
-      _typeName: SerializableCallback`1[[System.Boolean, mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089]], RedStudio.SerializableCallback,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      dirty: 0
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1888120367}
+          m_TargetAssemblyTypeName: 
+          m_MethodName: 
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!4 &589410371
 Transform:
   m_ObjectHideFlags: 0
@@ -380,17 +379,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3caef53f937d944abc38e910b75ccf5, type: 3}
---- !u!114 &1888120367 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 375305957170044707, guid: e3caef53f937d944abc38e910b75ccf5, type: 3}
+--- !u!1 &1888120367 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 982086289195539409, guid: e3caef53f937d944abc38e910b75ccf5, type: 3}
   m_PrefabInstance: {fileID: 1888120366}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e34755a0fe6ac84ebdd229f6414f5fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
