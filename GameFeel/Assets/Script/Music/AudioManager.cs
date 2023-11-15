@@ -46,8 +46,10 @@ public class AudioManager : MonoBehaviour
         s.Source.Play();
     }
 
-    public void Stop(SoundState soundState)
+    public void Stop(int musicState)
     {
+        SoundState soundState = (SoundState)musicState;
+
         if (DicoActualSound.ContainsKey(soundState))
         {
             int i = Random.Range(0, DicoActualSound[soundState].Count);
@@ -67,8 +69,10 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void PlayRandom(SoundState soundState)
+    public bool PlayRandom(int musicState)
     {
+        SoundState soundState = (SoundState)musicState;
+
         if (DicoActualSound.ContainsKey(soundState))
         {
             int i = Random.Range(0, DicoActualSound[soundState].Count);
@@ -77,9 +81,10 @@ public class AudioManager : MonoBehaviour
             if (s == null)
             {
                 Debug.LogWarning("Sound: " + name + " not found");
-                return;
+                return false;
             }
             s.Source.Play();
+            return true;
         }
         else
         {
