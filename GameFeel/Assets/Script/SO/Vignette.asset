@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bd05eec1232bcc4285ea3a69654abec, type: 3}
-  m_Name: Bloom
+  m_Script: {fileID: 11500000, guid: 7d8785d1c65eec94c9926d49598b5f29, type: 3}
+  m_Name: Vignette
   m_EditorClassIdentifier: 
-  Threshold: 0
   Intensity: 0
-  Scatter: 0
-  Tint: {r: 0, g: 0, b: 0, a: 0}
-  Clamp: 0
+  Color: {r: 0, g: 0, b: 0, a: 0}
+  Smoothness: 0

@@ -12,8 +12,9 @@ public class PostProcessManager : MonoBehaviour
     private Vignette _vignette;
     private Bloom _bloom;
 
-    //[Header("VignetteParam")]
-    //[SerializeField] private float maxVignetteIntensity;
+    [Header("Scriptables")]
+    [SerializeField] private BloomSO BloomScriptable;
+    [SerializeField] private VignetteSO VignetteScriptable;
 
     private void Start()
     {
@@ -26,7 +27,10 @@ public class PostProcessManager : MonoBehaviour
     {
         if (_vignette)
         {
-            //_vignette.intensity.value = Mathf.Lerp(0, maxVignetteIntensity, fearValue / maxFearValue);
+            if (_vignette.active == false) { _vignette.active = true; }
+            _vignette.intensity.value = VignetteScriptable.Intensity;
+            _vignette.color.value = VignetteScriptable.Color;
+            _vignette.smoothness.value = VignetteScriptable.Smoothness;
         }
     }
     
@@ -34,8 +38,22 @@ public class PostProcessManager : MonoBehaviour
     {
         if (_bloom)
         {
-            _bloom
-            //
+            if (_bloom.active == false) { _bloom.active = true; }
+            _bloom.threshold.value = BloomScriptable.Threshold;
+            _bloom.intensity.value = BloomScriptable.Intensity;
+            _bloom.scatter.value = BloomScriptable.Scatter;
+            _bloom.tint.value = BloomScriptable.Tint;
+            _bloom.clamp.value = BloomScriptable.Clamp;
         }
+    }
+
+    public void ResetVignette()
+    {
+        _vignette.active = false;
+    }
+
+    public void ResetBloom()
+    {
+        _bloom.active = false;
     }
 }
