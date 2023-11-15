@@ -2,10 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 public class Test : MonoBehaviour
 {
-    [SerializeField] private UpdateBehaviour _uB;
+    [Inject] private UpdateBehaviour _uB;
 
     public InputFX t;
 
