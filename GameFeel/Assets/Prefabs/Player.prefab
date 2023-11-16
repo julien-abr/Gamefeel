@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1327493391490842476}
   - component: {fileID: 4086943697224283078}
   - component: {fileID: 6234875680625016762}
+  - component: {fileID: 7348579194717293670}
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -103,16 +104,34 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 375305957170044707, guid: e3caef53f937d944abc38e910b75ccf5, type: 3}
           m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-          m_MethodName: Play
-          m_Mode: 5
+          m_MethodName: PlayRandom
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 5
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: 5
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &7348579194717293670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 19416596748583747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0da6e3746a06c4489cb1f412d472a80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curve: {fileID: 0}
+  interpolater: 0.5
+  speed: 0.05
+  point: 10
+  initSlideTime: 0.43
+  friction: 8
 --- !u!1 &980540897588485959
 GameObject:
   m_ObjectHideFlags: 0
@@ -140,8 +159,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1327493391490842476}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -186,8 +205,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c80d3e0001f2de5489373f671415193f, type: 3}
-  m_Color: {r: 0.9150943, g: 0.8351137, b: 0.17697577, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 466fb8209a4dfd345a597f2f3144501e, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
