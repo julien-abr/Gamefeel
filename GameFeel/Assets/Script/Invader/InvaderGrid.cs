@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.UI;
 using UnityEngine.SceneManagement;
 
 public class InvaderGrid : MonoBehaviour
@@ -17,18 +19,20 @@ public class InvaderGrid : MonoBehaviour
 
     [SerializeField] private float missileAttackRate = 1.0f;
 
-  
+    [SerializeField] private float spawnRate = 0.1f;
+
+    [SerializeField] private Player player;
 
     public int amountKilled { get; private set; }
-
     public int amountAlive => this.totalInvaders - this.amountKilled;
     public int totalInvaders => this.rows * this.columns;
     public float percentKilled => (float)this.amountKilled / (float)this.totalInvaders;
 
+    private bool _IsInitialized;
 
     private Vector3 _direction = Vector2.right;
 
-    private void Awake()
+    private IEnumerator Start()
     {
         for(int row = 0; row < this.rows; row++)
         {
@@ -45,18 +49,20 @@ public class InvaderGrid : MonoBehaviour
                 Vector3 position = rowPosition;
                 position.x += col * 2.0f;
                 invader.transform.localPosition = position;
+
+                yield return new WaitForSeconds(spawnRate);
             }
         }
 
-    }
-
-    private void Start()
-    {
         InvokeRepeating(nameof(MissileAttack), this.missileAttackRate, this.missileAttackRate);
+        _IsInitialized = true;
+        player.CanShoot(true);
     }
 
     private void Update()
     {
+        if (!_IsInitialized) { return; }
+
         this.transform.position += _direction * this.speed.Evaluate(this.percentKilled) * Time.deltaTime;
 
         Vector3 leftEdge = Camera.main.ViewportToWorldPoint(Vector3.zero);
@@ -96,7 +102,7 @@ public class InvaderGrid : MonoBehaviour
             {
                 continue;
             }
-            if(Random.value < (1.0f / (float)this.amountAlive))
+            if(UnityEngine.Random.value < (1.0f / (float)this.amountAlive))
             {
                 Instantiate(this.bulletPrefab, invader.position, Quaternion.identity);
                 break;

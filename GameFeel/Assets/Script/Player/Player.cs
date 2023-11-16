@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float speed = 5.0f;
 
     private bool _bulletActive;
+    private bool _canShoot;
 
     [Inject] private UpdateBehaviour _uB;
     [SerializeField] private InputFX _OnPlayerShoot;
@@ -29,7 +30,10 @@ public class Player : MonoBehaviour
 
         if(Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
-            Shoot();
+            if(_canShoot)
+            {
+                Shoot();
+            }      
         }
 
     }
@@ -57,6 +61,10 @@ public class Player : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
         }
+    }
+    public void CanShoot(bool result)
+    {
+        _canShoot = result;
     }
 }
 
