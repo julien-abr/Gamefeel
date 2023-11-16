@@ -1,3 +1,3 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement style="flex-grow: 1;" />
+    <ui:VisualElement style="flex-grow: 1; background-image: url(&apos;project://database/Assets/Sprites/BackgroundGood1.png?fileID=2800000&amp;guid=703e64f5cb66a564c9fd8c72443e7fee&amp;type=3#BackgroundGood1&apos;);" />
 </ui:UXML>
