@@ -6,9 +6,13 @@ using TMPro;
 
 public class UI_Manager : MonoBehaviour
 {
+    [SerializeField] private GameStatsRef gameStatsRef;
     [SerializeField] private TMP_Text textScore;
 
-    // Start is called before the first frame update
+    private void Start()
+    {
+        gameStatsRef.OnScoreChanged += UpdateScore;
+    }
     void UpdateScore(int score)
     {
         textScore.text = score.ToString();

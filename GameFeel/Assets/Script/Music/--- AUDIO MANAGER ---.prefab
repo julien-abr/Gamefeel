@@ -46,10 +46,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: Background Music
-    clip: {fileID: 8300000, guid: c0b214f31dafc2447ba0e3d8362be4d5, type: 3}
+    clip: {fileID: 8300000, guid: 29c631ae46142ae4695ee495dd99891f, type: 3}
     volume: 0.2
     pitch: 1
     loop: 1
     atStart: 1
     audioMixer: {fileID: 0}
     actualSound: 4
+  - name: Impact sound
+    clip: {fileID: 8300000, guid: 9515698e3eaf18f479276fad99b3b125, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 1
+    atStart: 1
+    audioMixer: {fileID: 0}
+    actualSound: 6
