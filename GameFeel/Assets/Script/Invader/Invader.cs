@@ -14,9 +14,11 @@ public class Invader : MonoBehaviour
     private int animationFrame;
 
     private Action _OnDeath;
+    [SerializeField] private UnityEvent _OnEnemySpawn;
     [SerializeField] private UnityEvent _OnEnemyTransfomationDeath;
     [SerializeField] private UnityEvent _OnEnemyNewFlowerDeath;
     public Action OnDeath { get => _OnDeath; set => _OnDeath = value; }
+    public UnityEvent OnEnemySpawn { get => _OnEnemySpawn; set => _OnEnemySpawn = value; }
     public UnityEvent OnEnemyTransfomationDeath { get => _OnEnemyTransfomationDeath; set => _OnEnemyTransfomationDeath = value; }
     public UnityEvent OnEnemyNewFlowerDeath { get => _OnEnemyNewFlowerDeath; set => _OnEnemyNewFlowerDeath = value; }
 
