@@ -23,12 +23,12 @@ public class Invader : MonoBehaviour
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        spriteRenderer.sprite = animationSprites[0];
+        //spriteRenderer.sprite = animationSprites[0];
     }
 
     private void Start()
-    {
-        InvokeRepeating(nameof(AnimateSprite), animationTime, animationTime);
+    { 
+        //InvokeRepeating(nameof(AnimateSprite), animationTime, animationTime);
     }
 
     private void AnimateSprite()
