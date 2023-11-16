@@ -8,27 +8,20 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private Bullet bulletPrefab;
 
-    [SerializeField] private float speed = 5.0f;
-
     [SerializeField] private float shootRate = 1.0f;
 
     private bool _bulletActive;
 
+
     [Inject] private UpdateBehaviour _uB;
     [SerializeField] private InputFX _OnPlayerShoot;
-    private void Start() => _OnPlayerShoot.SubscribeToUpdate(_uB);
-
-    private void Update()
+    [SerializeField] private InputInstantFX onPlayerMovement;
+    private void Start()
     {
-        if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-        {
-            this.transform.position += Vector3.left * this.speed * Time.deltaTime;
-        }
-        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-        {
-            this.transform.position += Vector3.right * this.speed * Time.deltaTime;
-        }
+        _OnPlayerShoot.SubscribeToUpdate(_uB);
+        onPlayerMovement.SubscribeToUpdate(_uB);
     }
+
     private void Shoot()
     {
         if (!_bulletActive)
@@ -39,6 +32,8 @@ public class Player : MonoBehaviour
 
             if (_OnPlayerShoot.TriggerEvent())
                 bullet.OnShootEvent.Invoke();
+
+            
         }
     }
 
