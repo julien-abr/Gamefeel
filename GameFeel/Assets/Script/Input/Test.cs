@@ -15,7 +15,6 @@ public class Test : MonoBehaviour
         t.SubscribeToUpdate(_uB);     
     }
 
-
     private void Update()
     {
         t.TriggerEvent();
