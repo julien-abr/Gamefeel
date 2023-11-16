@@ -53,6 +53,7 @@ public class Invader : MonoBehaviour
             _OnDeath.Invoke();
             _OnEnemyTransfomationDeath.TriggerEvent();
             _OnEnemyNewFlowerDeath.TriggerEvent();
+            Destroy(this.gameObject);
         }
         //else if (other.gameObject.layer == LayerMask.NameToLayer("Boundary"))
         //{
