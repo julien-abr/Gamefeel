@@ -68,7 +68,7 @@ public class InvaderGrid : MonoBehaviour
 
         InvokeRepeating(nameof(MissileAttack), this.missileAttackRate, this.missileAttackRate);
         _IsInitialized = true;
-        player.CanShoot(true);
+        player.StartShoot();
     }
 
     private void Update()

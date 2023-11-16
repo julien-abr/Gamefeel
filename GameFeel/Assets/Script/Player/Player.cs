@@ -10,8 +10,9 @@ public class Player : MonoBehaviour
 
     [SerializeField] private float speed = 5.0f;
 
+    [SerializeField] private float shootRate = 1.0f;
+
     private bool _bulletActive;
-    private bool _canShoot;
 
     [Inject] private UpdateBehaviour _uB;
     [SerializeField] private InputFX _OnPlayerShoot;
@@ -27,15 +28,6 @@ public class Player : MonoBehaviour
         {
             this.transform.position += Vector3.right * this.speed * Time.deltaTime;
         }
-
-        if(Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonDown(0))
-        {
-            if(_canShoot)
-            {
-                Shoot();
-            }      
-        }
-
     }
     private void Shoot()
     {
@@ -63,9 +55,9 @@ public class Player : MonoBehaviour
 
         }
     }
-    public void CanShoot(bool result)
+    public void StartShoot()
     {
-        _canShoot = result;
+        InvokeRepeating(nameof(Shoot), 0, shootRate);
     }
 }
 
