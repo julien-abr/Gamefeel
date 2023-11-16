@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class WindController : MonoBehaviour
 {
-    public Material material;
+    private List<Material> _windMaterials = new List<Material>();
     public float windSpeedModifer;
 
     public void Update()
 
     {
-        material.SetFloat("_WindSpeed", 0f);
+        //material.SetFloat("_WindSpeed", 0f);
     }
 }
