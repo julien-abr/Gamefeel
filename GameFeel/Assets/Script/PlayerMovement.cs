@@ -1,32 +1,26 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using Input = UnityEngine.Windows.Input;
+using UnityEngine.SceneManagement;
+using Zenject;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float _speed;
+    [SerializeField] private float speed = 5.0f;
 
-    private Rigidbody2D _rb;
-    private Vector2 _movementDirection;
-    
-    void Start()
+    private void OnEnable()
     {
-        _rb = GetComponent<Rigidbody2D>();
+        transform.position = new Vector3(transform.position.x, -13f, 0);
     }
-
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-
-        _movementDirection = new Vector2(UnityEngine.Input.GetAxis("Horizontal"), 0);
-    }
-
-    private void FixedUpdate()
-    {
-        _rb.velocity = _movementDirection * _speed;
-        Debug.Log(_rb.velocity);
+        if (Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.LeftArrow))
+        {
+            this.transform.position += Vector3.left * this.speed * Time.deltaTime;
+        }
+        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        {
+            this.transform.position += Vector3.right * this.speed * Time.deltaTime;
+        }
     }
 }

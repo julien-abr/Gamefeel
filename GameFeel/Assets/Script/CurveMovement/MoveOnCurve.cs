@@ -16,6 +16,10 @@ public class MoveOnCurve : MonoBehaviour
     [SerializeField] private float initSlideTime = 0.2f;
     [SerializeField] private float friction = 5f;
 
+    private void OnEnable()
+    {
+        point = 10;
+    }
     void Update()
     {
         if (point >= 0 && point <= curve.Points.Count)
