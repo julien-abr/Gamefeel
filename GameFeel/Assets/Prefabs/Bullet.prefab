@@ -148,6 +148,21 @@ MonoBehaviour:
   direction: {x: 0, y: 1, z: 0}
   speed: 30
   _ref: {fileID: 11400000, guid: 73acff69cf053fe47be4e683fd439301, type: 2}
+  _OnShootEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7208761068738793523}
+        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!50 &2232609443600395888
 Rigidbody2D:
   serializedVersion: 4
@@ -183,7 +198,7 @@ TrailRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7081704537773720163}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

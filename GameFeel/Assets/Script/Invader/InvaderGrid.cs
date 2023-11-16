@@ -82,22 +82,13 @@ public class InvaderGrid : MonoBehaviour
             }
             if(_direction == Vector3.right && invader.position.x >= (rightEdge.x - 1.0f))
             {
-                AdvanceRow();
+                _direction.x *= -1.0f;
             }
             else if(_direction == Vector3.left && invader.position.x <= (leftEdge.x + 1.0f))
             {
-                AdvanceRow();
+                _direction.x *= -1.0f;
             }
         }
-    }
-
-    private void AdvanceRow()
-    {
-        _direction.x *= -1.0f;
-
-        Vector3 position = this.transform.position;
-        position.y -= 1.0f;
-        this.transform.position = position;
     }
 
     private void MissileAttack()
