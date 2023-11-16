@@ -12,7 +12,6 @@ public class Invader : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private int animationFrame;
 
-    [Inject] private UpdateBehaviour _uB;
     [SerializeField] private InputFX _OnEnemyTransfomationDeath;
     [SerializeField] private InputFX _OnEnemyNewFlowerDeath;
     private Action _OnDeath;
@@ -26,10 +25,13 @@ public class Invader : MonoBehaviour
 
     private void Start()
     {
-        _OnEnemyTransfomationDeath.SubscribeToUpdate(_uB);
-        _OnEnemyNewFlowerDeath.SubscribeToUpdate(_uB);
-
         InvokeRepeating(nameof(AnimateSprite), animationTime, animationTime);
+    }
+
+    public void BindEventKey(UpdateBehaviour uB)
+    {
+        _OnEnemyTransfomationDeath.SubscribeToUpdate(uB);
+        _OnEnemyNewFlowerDeath.SubscribeToUpdate(uB);
     }
 
     private void AnimateSprite()
