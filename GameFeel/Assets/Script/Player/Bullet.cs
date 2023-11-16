@@ -35,7 +35,7 @@ public class Bullet : MonoBehaviour
         {
             this.destroyed.Invoke();
 
-            if (LaserLayer == gameObject.layer)
+            if (LaserLayer == gameObject.layer && other.gameObject.layer == LayerMask.NameToLayer("Invader"))
             {
                 int newScore = 1 + _ref.Instance;
                 RealRef.Set(newScore);
