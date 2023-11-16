@@ -6,9 +6,10 @@ using UnityEngine;
 [Serializable]
 public enum SoundState
 {
-    MENU,
+    MENU,  // 0 
     VICTORY,
     DEATH,
     DAMAGE,
-    MUSIC
+    MUSIC,
+    SHOOT
 }

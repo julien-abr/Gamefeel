@@ -69,7 +69,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public bool PlayRandom(int musicState)
+    public void PlayRandom(int musicState)
     {
         SoundState soundState = (SoundState)musicState;
 
@@ -81,10 +81,10 @@ public class AudioManager : MonoBehaviour
             if (s == null)
             {
                 Debug.LogWarning("Sound: " + name + " not found");
-                return false;
+                return;
             }
             s.Source.Play();
-            return true;
+            return;
         }
         else
         {
