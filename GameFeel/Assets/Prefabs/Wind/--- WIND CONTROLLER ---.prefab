@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1233567183114059511
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6773216731141026918}
+  - component: {fileID: 8865816842592607457}
+  m_Layer: 0
+  m_Name: --- WIND CONTROLLER ---
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6773216731141026918
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233567183114059511}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.2076879, y: -7.1111627, z: -0.045046013}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8865816842592607457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233567183114059511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abfb9ff9ccb5be842ab34845a7c5bcf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _windMaterials:
+  - {fileID: 2100000, guid: e3200c848cd950a45a4efe25a7d9c939, type: 2}
+  - {fileID: 2100000, guid: b892ef3f2335d084b8193ff53230b945, type: 2}
+  - {fileID: 2100000, guid: c911923196654a248b8c29706c7f1280, type: 2}
+  - {fileID: 2100000, guid: 98ddc41f4bcd641448f0d45a8f11612f, type: 2}
+  - {fileID: 2100000, guid: 5e3f4474f07ea504f9efc439523214aa, type: 2}
+  - {fileID: 2100000, guid: 41c8406e3ff4e364a9d666ad9ee38800, type: 2}
+  _OnWindEffect:
+    _inputKey: 118
+    _OnEventActivateFX:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8865816842592607457}
+          m_TargetAssemblyTypeName: WindController, Assembly-CSharp
+          m_MethodName: ActivateWind
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    _OnEventDesactivateFX:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8865816842592607457}
+          m_TargetAssemblyTypeName: WindController, Assembly-CSharp
+          m_MethodName: DesactivateWind
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
