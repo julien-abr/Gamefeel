@@ -57,7 +57,15 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 9515698e3eaf18f479276fad99b3b125, type: 3}
     volume: 0.2
     pitch: 1
-    loop: 1
-    atStart: 1
+    loop: 0
+    atStart: 0
     audioMixer: {fileID: 0}
     actualSound: 6
+  - name: Shoot
+    clip: {fileID: 8300000, guid: d1743f428c9098f4bb6a643c8637d357, type: 3}
+    volume: 0.518
+    pitch: 1
+    loop: 0
+    atStart: 0
+    audioMixer: {fileID: 0}
+    actualSound: 5
