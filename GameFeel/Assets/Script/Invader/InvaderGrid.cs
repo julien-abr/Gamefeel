@@ -55,13 +55,15 @@ public class InvaderGrid : MonoBehaviour
             {
                 Invader invader = Instantiate(this.prefab[row], this.transform);
                 invader.OnDeath += InvaderKilled;
-                invader.OnEnemySpawn.AddListener(() => _OnInvaderSpawn.TriggerEvent());
                 invader.OnEnemyTransfomationDeath.AddListener(() => _OnEnemyTransfomationDeath.TriggerEvent());
                 invader.OnEnemyNewFlowerDeath.AddListener(() => _OnEnemyNewFlowerDeath.TriggerEvent());
 
                 Vector3 position = rowPosition;
                 position.x += col * 2.0f;
                 invader.transform.localPosition = position;
+
+                if (_OnInvaderSpawn.TriggerEvent())
+                    invader.OnEnemySpawn.Invoke();
 
                 yield return new WaitForSeconds(spawnRate);
             }
