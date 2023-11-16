@@ -10,21 +10,63 @@ public class MoveOnCurve : MonoBehaviour
     [SerializeField] private float interpolater = 0.5f;
     [SerializeField] private float speed;
     [SerializeField] private int point;
-    
+
+     private float leftSlideTime;
+     private float rightSlideTime;
+    [SerializeField] private float initSlideTime = 0.2f;
+    [SerializeField] private float friction = 5f;
+
     void Update()
     {
-        if(point >= 0 && point <= curve.Points.Count)
+        if (point >= 0 && point <= curve.Points.Count)
         {
-            if (Input.GetKey(KeyCode.RightArrow))
+            if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
             {
                 interpolater += speed;
             }
-            if (Input.GetKey(KeyCode.LeftArrow))
+            if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.Q))
             {
                 interpolater -= speed;
             }
+
+            if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.D))
+            {
+                rightSlideTime = initSlideTime;
+            }
+            if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.Q))
+            {
+                leftSlideTime = initSlideTime;
+            }
         }
-        
+
+        if(rightSlideTime >= 0)
+        {
+            rightSlideTime -= Time.deltaTime;
+
+            for (float i = 0.9f; i >= 0; i -= 0.1f)
+            {
+
+                if (rightSlideTime >= initSlideTime * i)
+                {
+                    interpolater += speed * i / friction;                  
+                }
+            }
+            
+        }
+        if (leftSlideTime >= 0)
+        {
+            leftSlideTime -= Time.deltaTime;
+
+            for(float i = 0.9f; i >= 0; i-= 0.1f)
+            {
+                
+                if(leftSlideTime >= initSlideTime * i)
+                {
+                    interpolater -= speed * i / friction;               
+                }
+            }                  
+        }
+       
 
         if (interpolater > 1)
         {
@@ -47,7 +89,6 @@ public class MoveOnCurve : MonoBehaviour
                 interpolater = 0;
 
         }
-
 
 
         if (curve.Points != null)
