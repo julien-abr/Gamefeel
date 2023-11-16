@@ -1,16 +1,22 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 public class Invader : MonoBehaviour
 {
     [SerializeField]private Sprite[] animationSprites;
 
     [SerializeField] float animationTime = 1.0f;
-    public System.Action killed;
     private SpriteRenderer spriteRenderer;
-
     private int animationFrame;
+
+    [Inject] private UpdateBehaviour _uB;
+    [SerializeField] private InputFX _OnEnemyTransfomationDeath;
+    [SerializeField] private InputFX _OnEnemyNewFlowerDeath;
+    private Action _OnDeath;
+    public Action OnDeath { get => _OnDeath; set => _OnDeath = value; }
 
     private void Awake()
     {
@@ -20,6 +26,9 @@ public class Invader : MonoBehaviour
 
     private void Start()
     {
+        _OnEnemyTransfomationDeath.SubscribeToUpdate(_uB);
+        _OnEnemyNewFlowerDeath.SubscribeToUpdate(_uB);
+
         InvokeRepeating(nameof(AnimateSprite), animationTime, animationTime);
     }
 
@@ -39,8 +48,9 @@ public class Invader : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Laser"))
         {
-            this.killed.Invoke();
-            this.gameObject.SetActive(false);
+            _OnDeath.Invoke();
+            _OnEnemyTransfomationDeath.TriggerEvent();
+            _OnEnemyNewFlowerDeath.TriggerEvent();
         }
         //else if (other.gameObject.layer == LayerMask.NameToLayer("Boundary"))
         //{

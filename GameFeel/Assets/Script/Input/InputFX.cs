@@ -23,9 +23,11 @@ public class InputFX
             _isOn = !IsOn;
     }
 
-    public void TriggerEvent()
+    public bool TriggerEvent()
     {
         if (_isOn)
             _OnEventFX.Invoke();
+
+        return _isOn;
     }
 }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.UI;
 using UnityEngine.SceneManagement;
+using Zenject;
 
 public class InvaderGrid : MonoBehaviour
 {
@@ -32,9 +33,14 @@ public class InvaderGrid : MonoBehaviour
 
     private Vector3 _direction = Vector2.right;
 
+    [Inject] private UpdateBehaviour _uB;
+    [SerializeField] private InputFX _OnInvaderSpawn;
+
     private IEnumerator Start()
     {
-        for(int row = 0; row < this.rows; row++)
+        _OnInvaderSpawn.SubscribeToUpdate(_uB);
+
+        for (int row = 0; row < this.rows; row++)
         {
             float width = 2.0f * (this.columns - 1);
             float height = 2.0f * (this.rows - 1);
@@ -44,7 +50,7 @@ public class InvaderGrid : MonoBehaviour
             for (int col = 0; col < this.columns; col++)
             {
                 Invader invader = Instantiate(this.prefab[row], this.transform);
-                invader.killed += InvaderKilled;
+                invader.OnDeath += InvaderKilled;
 
                 Vector3 position = rowPosition;
                 position.x += col * 2.0f;

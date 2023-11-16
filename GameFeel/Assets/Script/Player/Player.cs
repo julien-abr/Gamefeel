@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Zenject;
 
 public class Player : MonoBehaviour
 {
@@ -11,6 +12,10 @@ public class Player : MonoBehaviour
 
     private bool _bulletActive;
     private bool _canShoot;
+
+    [Inject] private UpdateBehaviour _uB;
+    [SerializeField] private InputFX _OnPlayerShoot;
+    private void Start() => _OnPlayerShoot.SubscribeToUpdate(_uB);
 
     private void Update()
     {
@@ -36,10 +41,14 @@ public class Player : MonoBehaviour
     {
         if (!_bulletActive)
         {
-
             Bullet bullet = Instantiate(this.bulletPrefab, this.transform.position, Quaternion.identity);
             bullet.destroyed += BulletDestoyed;
             _bulletActive = true;
+
+            if (_OnPlayerShoot.TriggerEvent())
+            {
+                //Active Bullet Effect
+            }
         }
     }
 
