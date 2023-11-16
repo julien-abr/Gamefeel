@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [Serializable]
-public class InputInstantFX
+public class InputSwitchFX
 {
     [SerializeField] private KeyCode _inputKey;
     private bool _isOn;

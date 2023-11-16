@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
 
     [Inject] private UpdateBehaviour _uB;
     [SerializeField] private InputFX _OnPlayerShoot;
-    [SerializeField] private InputInstantFX onPlayerMovement;
+    [SerializeField] private InputSwitchFX onPlayerMovement;
     private void Start()
     {
         _OnPlayerShoot.SubscribeToUpdate(_uB);
