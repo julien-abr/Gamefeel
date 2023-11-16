@@ -146,6 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   direction: {x: 0, y: 1, z: 0}
   speed: 30
+  _ref: {fileID: 11400000, guid: 73acff69cf053fe47be4e683fd439301, type: 2}
 --- !u!50 &2232609443600395888
 Rigidbody2D:
   serializedVersion: 4
