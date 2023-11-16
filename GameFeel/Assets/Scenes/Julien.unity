@@ -250,6 +250,16 @@ MonoBehaviour:
     _OnEventFX:
       m_PersistentCalls:
         m_Calls: []
+  _OnEnemyTransfomationDeath:
+    _inputKey: 0
+    _OnEventFX:
+      m_PersistentCalls:
+        m_Calls: []
+  _OnEnemyNewFlowerDeath:
+    _inputKey: 0
+    _OnEventFX:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!4 &577717192
 Transform:
   m_ObjectHideFlags: 0
@@ -556,6 +566,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: -8598269539046310275, guid: cbd46f3dd07227944acb11363aa3177e, type: 3}
   speed: 5
+  shootRate: 1.5
   _OnPlayerShoot:
     _inputKey: 0
     _OnEventFX:
