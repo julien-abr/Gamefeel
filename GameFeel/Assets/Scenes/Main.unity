@@ -496,7 +496,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 370007664335970637, guid: 7e3348d3edd18864082e8809ce3a907c, type: 3}
   missileAttackRate: 0
   spawnRate: 0.1
-  player: {fileID: 0}
+  player: {fileID: 1372493053}
   _OnInvaderSpawn:
     _inputKey: 0
     _OnEventFX:
@@ -1470,7 +1470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b55abff304e1a845999faf5f7d18921, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ref: {fileID: 0}
+  _ref: {fileID: 11400000, guid: 73acff69cf053fe47be4e683fd439301, type: 2}
 --- !u!1 &2112011765
 GameObject:
   m_ObjectHideFlags: 0
