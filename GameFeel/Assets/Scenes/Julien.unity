@@ -857,9 +857,9 @@ MonoBehaviour:
   prefab:
   - {fileID: 7047409517890859565, guid: 740c738d33876b54b81b93c6c5f5fade, type: 3}
   - {fileID: 7047409517890859565, guid: 740c738d33876b54b81b93c6c5f5fade, type: 3}
-  - {fileID: 4799382157621370609, guid: 19be118e71e195b45937415bec2c5bde, type: 3}
-  - {fileID: 4799382157621370609, guid: 19be118e71e195b45937415bec2c5bde, type: 3}
-  - {fileID: 8669428869140452788, guid: 0bb1ca9f9f72e3149ae297cec262de16, type: 3}
+  - {fileID: 7047409517890859565, guid: 740c738d33876b54b81b93c6c5f5fade, type: 3}
+  - {fileID: 7047409517890859565, guid: 740c738d33876b54b81b93c6c5f5fade, type: 3}
+  - {fileID: 7047409517890859565, guid: 740c738d33876b54b81b93c6c5f5fade, type: 3}
   rows: 5
   columns: 11
   speed:
@@ -907,6 +907,16 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  _OnEnemyTransfomationDeath:
+    _inputKey: 0
+    _OnEventFX:
+      m_PersistentCalls:
+        m_Calls: []
+  _OnEnemyNewFlowerDeath:
+    _inputKey: 0
+    _OnEventFX:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!4 &577717192
 Transform:
   m_ObjectHideFlags: 0
@@ -1945,6 +1955,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: -8598269539046310275, guid: cbd46f3dd07227944acb11363aa3177e, type: 3}
   speed: 5
+  shootRate: 1
   _OnPlayerShoot:
     _inputKey: 0
     _OnEventFX:
