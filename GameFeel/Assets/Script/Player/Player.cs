@@ -46,9 +46,7 @@ public class Player : MonoBehaviour
             _bulletActive = true;
 
             if (_OnPlayerShoot.TriggerEvent())
-            {
-                //Active Bullet Effect
-            }
+                bullet.OnShootEvent.Invoke();
         }
     }
 
