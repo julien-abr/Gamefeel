@@ -51,6 +51,7 @@ public class InvaderGrid : MonoBehaviour
             {
                 Invader invader = Instantiate(this.prefab[row], this.transform);
                 invader.OnDeath += InvaderKilled;
+                invader.BindEventKey(_uB);
 
                 Vector3 position = rowPosition;
                 position.x += col * 2.0f;
