@@ -27,5 +27,6 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         _rb.velocity = _movementDirection * _speed;
+        Debug.Log(_rb.velocity);
     }
 }
