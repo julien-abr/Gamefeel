@@ -45,7 +45,10 @@ public class Player : MonoBehaviour
             bullet.destroyed += BulletDestoyed;
             _bulletActive = true;
 
-            _OnPlayerShoot.TriggerEvent();
+            if (_OnPlayerShoot.TriggerEvent())
+            {
+                //Active Bullet Effect
+            }
         }
     }
 
