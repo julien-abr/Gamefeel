@@ -40,9 +40,7 @@ public class InvaderGrid : MonoBehaviour
             for (int col = 0; col < this.columns; col++)
             {
                 Invader invader = Instantiate(this.prefab[row], this.transform);
-                invader.killed += InvaderKilled;
-
-
+                invader.OnDeath += InvaderKilled;
 
                 Vector3 position = rowPosition;
                 position.x += col * 2.0f;
