@@ -11,5 +11,6 @@ public enum SoundState
     DEATH,
     DAMAGE,
     MUSIC,
-    SHOOT
+    SHOOT,
+    IMPACT
 }

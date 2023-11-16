@@ -35,10 +35,14 @@ public class InvaderGrid : MonoBehaviour
 
     [Inject] private UpdateBehaviour _uB;
     [SerializeField] private InputFX _OnInvaderSpawn;
+    [SerializeField] private InputFX _OnEnemyTransfomationDeath;
+    [SerializeField] private InputFX _OnEnemyNewFlowerDeath;
 
     private IEnumerator Start()
     {
         _OnInvaderSpawn.SubscribeToUpdate(_uB);
+        _OnEnemyTransfomationDeath.SubscribeToUpdate(_uB);
+        _OnEnemyNewFlowerDeath.SubscribeToUpdate(_uB);
 
         for (int row = 0; row < this.rows; row++)
         {
@@ -51,7 +55,8 @@ public class InvaderGrid : MonoBehaviour
             {
                 Invader invader = Instantiate(this.prefab[row], this.transform);
                 invader.OnDeath += InvaderKilled;
-                invader.BindEventKey(_uB);
+                invader.OnEnemyTransfomationDeath.AddListener(() => _OnEnemyTransfomationDeath.TriggerEvent());
+                invader.OnEnemyNewFlowerDeath.AddListener(() => _OnEnemyNewFlowerDeath.TriggerEvent());
 
                 Vector3 position = rowPosition;
                 position.x += col * 2.0f;
@@ -63,7 +68,7 @@ public class InvaderGrid : MonoBehaviour
 
         InvokeRepeating(nameof(MissileAttack), this.missileAttackRate, this.missileAttackRate);
         _IsInitialized = true;
-        player.CanShoot(true);
+        player.StartShoot();
     }
 
     private void Update()
