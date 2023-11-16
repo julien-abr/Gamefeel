@@ -38,6 +38,9 @@ public class FlowerSpawnManager : MonoBehaviour
 
     public void RevealNewFlower()
     {
+        if (_flowerRendererList.Count <= 0)
+            return;
+
         int r = Random.Range(0, _flowerRendererList.Count);
 
         if(_flowerSprites.Count > 0)
