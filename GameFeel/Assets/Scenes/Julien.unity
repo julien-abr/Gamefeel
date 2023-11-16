@@ -907,6 +907,16 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  _OnEnemyTransfomationDeath:
+    _inputKey: 0
+    _OnEventFX:
+      m_PersistentCalls:
+        m_Calls: []
+  _OnEnemyNewFlowerDeath:
+    _inputKey: 0
+    _OnEventFX:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!4 &577717192
 Transform:
   m_ObjectHideFlags: 0
@@ -1417,6 +1427,10 @@ PrefabInstance:
       value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 454258138569983213, guid: cabe5c46169704146a400b5d39f02a9a, type: 3}
+      propertyPath: m_Parameters.colorGradient.atime1
+      value: 47995
+      objectReference: {fileID: 0}
+    - target: {fileID: 454258138569983213, guid: cabe5c46169704146a400b5d39f02a9a, type: 3}
       propertyPath: m_Parameters.colorGradient.key0.b
       value: 0.3764706
       objectReference: {fileID: 0}
@@ -1429,16 +1443,20 @@ PrefabInstance:
       value: 0.8980392
       objectReference: {fileID: 0}
     - target: {fileID: 454258138569983213, guid: cabe5c46169704146a400b5d39f02a9a, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 454258138569983213, guid: cabe5c46169704146a400b5d39f02a9a, type: 3}
       propertyPath: m_Parameters.colorGradient.key1.b
-      value: 0.9921569
+      value: 0.37647063
       objectReference: {fileID: 0}
     - target: {fileID: 454258138569983213, guid: cabe5c46169704146a400b5d39f02a9a, type: 3}
       propertyPath: m_Parameters.colorGradient.key1.g
-      value: 0.72156864
+      value: 0.73333335
       objectReference: {fileID: 0}
     - target: {fileID: 454258138569983213, guid: cabe5c46169704146a400b5d39f02a9a, type: 3}
       propertyPath: m_Parameters.colorGradient.key1.r
-      value: 0.78823537
+      value: 0.8980393
       objectReference: {fileID: 0}
     - target: {fileID: 454258138569983213, guid: cabe5c46169704146a400b5d39f02a9a, type: 3}
       propertyPath: m_Parameters.colorGradient.m_ColorSpace
@@ -1945,6 +1963,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: -8598269539046310275, guid: cbd46f3dd07227944acb11363aa3177e, type: 3}
   speed: 5
+  shootRate: 1
   _OnPlayerShoot:
     _inputKey: 0
     _OnEventFX:
