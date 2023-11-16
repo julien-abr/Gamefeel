@@ -1,5 +1,88 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1961632947433293226
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 9079435262174131933}
+    m_Modifications:
+    - target: {fileID: 1110660304196812569, guid: 15d799b74fa1a0b489d1475c832e7144, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1110660304196812569, guid: 15d799b74fa1a0b489d1475c832e7144, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2340146405899503000, guid: 15d799b74fa1a0b489d1475c832e7144, type: 3}
+      propertyPath: m_Name
+      value: enemy_spawn_particle
+      objectReference: {fileID: 0}
+    - target: {fileID: 2644271672439116080, guid: 15d799b74fa1a0b489d1475c832e7144, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2644271672439116080, guid: 15d799b74fa1a0b489d1475c832e7144, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007927351119224479, guid: 15d799b74fa1a0b489d1475c832e7144, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007927351119224479, guid: 15d799b74fa1a0b489d1475c832e7144, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007927351119224479, guid: 15d799b74fa1a0b489d1475c832e7144, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007927351119224479, guid: 15d799b74fa1a0b489d1475c832e7144, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007927351119224479, guid: 15d799b74fa1a0b489d1475c832e7144, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007927351119224479, guid: 15d799b74fa1a0b489d1475c832e7144, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007927351119224479, guid: 15d799b74fa1a0b489d1475c832e7144, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007927351119224479, guid: 15d799b74fa1a0b489d1475c832e7144, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007927351119224479, guid: 15d799b74fa1a0b489d1475c832e7144, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007927351119224479, guid: 15d799b74fa1a0b489d1475c832e7144, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 15d799b74fa1a0b489d1475c832e7144, type: 3}
+--- !u!198 &1463886947661511347 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1110660304196812569, guid: 15d799b74fa1a0b489d1475c832e7144, type: 3}
+  m_PrefabInstance: {fileID: 1961632947433293226}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3217288074195000117 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4007927351119224479, guid: 15d799b74fa1a0b489d1475c832e7144, type: 3}
+  m_PrefabInstance: {fileID: 1961632947433293226}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9177651214794904369
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -113,8 +196,44 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 62bd310435a5d0c468ae8052f0a3e83c, type: 3}
     - target: {fileID: 2202538092351398172, guid: 6d9bff009d8a3c647ac29f6f80e7c6d4, type: 3}
+      propertyPath: _OnEnemySpawn.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2202538092351398172, guid: 6d9bff009d8a3c647ac29f6f80e7c6d4, type: 3}
+      propertyPath: _OnEnemySpawn.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2202538092351398172, guid: 6d9bff009d8a3c647ac29f6f80e7c6d4, type: 3}
+      propertyPath: _OnEnemySpawn.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1463886947661511347}
+    - target: {fileID: 2202538092351398172, guid: 6d9bff009d8a3c647ac29f6f80e7c6d4, type: 3}
+      propertyPath: _OnEnemyTransfomationDeath.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2202538092351398172, guid: 6d9bff009d8a3c647ac29f6f80e7c6d4, type: 3}
+      propertyPath: _OnEnemySpawn.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2202538092351398172, guid: 6d9bff009d8a3c647ac29f6f80e7c6d4, type: 3}
+      propertyPath: _OnEnemySpawn.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 2202538092351398172, guid: 6d9bff009d8a3c647ac29f6f80e7c6d4, type: 3}
+      propertyPath: _OnEnemyTransfomationDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2202538092351398172, guid: 6d9bff009d8a3c647ac29f6f80e7c6d4, type: 3}
       propertyPath: _OnEnemyTransfomationDeath._OnEventFX.m_PersistentCalls.m_Calls.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2202538092351398172, guid: 6d9bff009d8a3c647ac29f6f80e7c6d4, type: 3}
+      propertyPath: _OnEnemySpawn.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.ParticleSystem, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2202538092351398172, guid: 6d9bff009d8a3c647ac29f6f80e7c6d4, type: 3}
+      propertyPath: _OnEnemyTransfomationDeath.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2202538092351398172, guid: 6d9bff009d8a3c647ac29f6f80e7c6d4, type: 3}
       propertyPath: _OnEnemyTransfomationDeath._OnEventFX.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -131,6 +250,10 @@ PrefabInstance:
     - target: {fileID: 2202538092351398172, guid: 6d9bff009d8a3c647ac29f6f80e7c6d4, type: 3}
       propertyPath: _OnEnemyTransfomationDeath._OnEventFX.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 2202538092351398172, guid: 6d9bff009d8a3c647ac29f6f80e7c6d4, type: 3}
+      propertyPath: _OnEnemySpawn.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2202538092351398172, guid: 6d9bff009d8a3c647ac29f6f80e7c6d4, type: 3}
       propertyPath: _OnEnemyTransfomationDeath._OnEventFX.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -170,7 +293,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 98291269469677036, guid: 6d9bff009d8a3c647ac29f6f80e7c6d4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3217288074195000117}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 552557456034862444, guid: 6d9bff009d8a3c647ac29f6f80e7c6d4, type: 3}
       insertIndex: -1
@@ -202,3 +328,8 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!4 &9079435262174131933 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 98291269469677036, guid: 6d9bff009d8a3c647ac29f6f80e7c6d4, type: 3}
+  m_PrefabInstance: {fileID: 9177651214794904369}
+  m_PrefabAsset: {fileID: 0}
