@@ -62,6 +62,9 @@ public class InvaderGrid : MonoBehaviour
                 position.x += col * 2.0f;
                 invader.transform.localPosition = position;
 
+                if (_OnInvaderSpawn.TriggerEvent())
+                    invader.OnEnemySpawn.Invoke();
+
                 yield return new WaitForSeconds(spawnRate);
             }
         }
