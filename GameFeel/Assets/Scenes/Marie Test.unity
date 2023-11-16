@@ -1495,7 +1495,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   bulletPrefab: {fileID: 370007664335970637, guid: 7e3348d3edd18864082e8809ce3a907c, type: 3}
   missileAttackRate: 0
-  spawnRate: 0.1
+  spawnRate: 0.2
   player: {fileID: 6234875680510501858}
   _OnInvaderSpawn:
     _inputKey: 282
@@ -1515,7 +1515,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   _OnEnemyTransfomationDeath:
-    _inputKey: 283
+    _inputKey: 102
     _OnEventFX:
       m_PersistentCalls:
         m_Calls:
@@ -2196,16 +2196,48 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 375305957170044707, guid: e3caef53f937d944abc38e910b75ccf5, type: 3}
+      propertyPath: sounds.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 375305957170044707, guid: e3caef53f937d944abc38e910b75ccf5, type: 3}
       propertyPath: sounds.Array.data[1].loop
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 375305957170044707, guid: e3caef53f937d944abc38e910b75ccf5, type: 3}
+      propertyPath: sounds.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 207829e502dd14040b06781426e730f2, type: 3}
+    - target: {fileID: 375305957170044707, guid: e3caef53f937d944abc38e910b75ccf5, type: 3}
+      propertyPath: sounds.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: d1743f428c9098f4bb6a643c8637d357, type: 3}
+    - target: {fileID: 375305957170044707, guid: e3caef53f937d944abc38e910b75ccf5, type: 3}
+      propertyPath: sounds.Array.data[3].name
+      value: Shoot
+      objectReference: {fileID: 0}
+    - target: {fileID: 375305957170044707, guid: e3caef53f937d944abc38e910b75ccf5, type: 3}
+      propertyPath: sounds.Array.data[3].pitch
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 375305957170044707, guid: e3caef53f937d944abc38e910b75ccf5, type: 3}
       propertyPath: sounds.Array.data[0].volume
       value: 0.216
       objectReference: {fileID: 0}
     - target: {fileID: 375305957170044707, guid: e3caef53f937d944abc38e910b75ccf5, type: 3}
+      propertyPath: sounds.Array.data[2].volume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 375305957170044707, guid: e3caef53f937d944abc38e910b75ccf5, type: 3}
+      propertyPath: sounds.Array.data[3].volume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 375305957170044707, guid: e3caef53f937d944abc38e910b75ccf5, type: 3}
       propertyPath: sounds.Array.data[1].atStart
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 375305957170044707, guid: e3caef53f937d944abc38e910b75ccf5, type: 3}
+      propertyPath: sounds.Array.data[3].actualSound
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 982086289195539409, guid: e3caef53f937d944abc38e910b75ccf5, type: 3}
       propertyPath: m_Name
@@ -3487,7 +3519,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: -8598269539046310275, guid: cbd46f3dd07227944acb11363aa3177e, type: 3}
-  speed: 0
   shootRate: 1
   _OnPlayerShoot:
     _inputKey: 282
@@ -3518,6 +3549,14 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  onPlayerMovement:
+    _inputKey: 0
+    _OnEventActivateFX:
+      m_PersistentCalls:
+        m_Calls: []
+    _OnEventDesactivateFX:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!114 &1372493054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10340,14 +10379,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: -8598269539046310275, guid: cbd46f3dd07227944acb11363aa3177e, type: 3}
-  speed: 5
   shootRate: 1
   _OnPlayerShoot:
-    _inputKey: 282
+    _inputKey: 103
     _OnEventFX:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 375305957170044707, guid: e3caef53f937d944abc38e910b75ccf5, type: 3}
+        - m_Target: {fileID: 1036002246}
           m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
           m_MethodName: PlayRandom
           m_Mode: 3
@@ -10356,9 +10394,17 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 5
             m_FloatArgument: 0
-            m_StringArgument: 5
+            m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  onPlayerMovement:
+    _inputKey: 0
+    _OnEventActivateFX:
+      m_PersistentCalls:
+        m_Calls: []
+    _OnEventDesactivateFX:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &6667358402635103799
 GameObject:
   m_ObjectHideFlags: 0
