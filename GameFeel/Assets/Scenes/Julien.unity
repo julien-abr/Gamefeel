@@ -186,6 +186,8 @@ MonoBehaviour:
     m_RotationOrder: 4
   bulletPrefab: {fileID: 370007664335970637, guid: 7e3348d3edd18864082e8809ce3a907c, type: 3}
   missileAttackRate: 1
+  spawnRate: 0.1
+  player: {fileID: 1372493053}
 --- !u!4 &577717192
 Transform:
   m_ObjectHideFlags: 0
