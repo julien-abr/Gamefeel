@@ -17,10 +17,8 @@ public class PlayerMovement : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-
         _movementDirection = new Vector2(UnityEngine.Input.GetAxis("Horizontal"), 0);
     }
 
