@@ -88,7 +88,7 @@ public class AudioManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("No music of type " + soundState.DisplayName());
+            Debug.Log("No music of type " + soundState);
         }   
     }
 }
