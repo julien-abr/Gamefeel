@@ -13,6 +13,8 @@ public class Invader : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private int animationFrame;
 
+    public Transform a;
+
     private Action _OnDeath;
     [SerializeField] private UnityEvent _OnEnemySpawn;
     [SerializeField] private UnityEvent _OnEnemyTransfomationDeath;
@@ -52,6 +54,10 @@ public class Invader : MonoBehaviour
             _OnDeath.Invoke();
             _OnEnemyTransfomationDeath.Invoke();
             _OnEnemyNewFlowerDeath.Invoke();
+            
+                a.SetParent(null);
+            
+
             Destroy(this.gameObject);
         }
         //else if (other.gameObject.layer == LayerMask.NameToLayer("Boundary"))
