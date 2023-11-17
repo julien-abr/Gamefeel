@@ -69,3 +69,11 @@ MonoBehaviour:
     atStart: 0
     audioMixer: {fileID: 0}
     actualSound: 5
+  - name: Soundtrack
+    clip: {fileID: 8300000, guid: ef97d99cf500b234aa8f932263511e9f, type: 3}
+    volume: 0.518
+    pitch: 1
+    loop: 0
+    atStart: 1
+    audioMixer: {fileID: 0}
+    actualSound: 7
