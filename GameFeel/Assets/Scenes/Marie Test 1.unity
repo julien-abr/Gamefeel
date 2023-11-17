@@ -3238,6 +3238,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 375305957170044707, guid: e3caef53f937d944abc38e910b75ccf5, type: 3}
+      propertyPath: sounds.Array.data[3].atStart
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 375305957170044707, guid: e3caef53f937d944abc38e910b75ccf5, type: 3}
       propertyPath: sounds.Array.data[3].actualSound
       value: 5
       objectReference: {fileID: 0}
