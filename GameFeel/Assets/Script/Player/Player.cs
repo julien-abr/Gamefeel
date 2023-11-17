@@ -37,6 +37,14 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }        
+    }
+
     private void BulletDestoyed()
     {
         _bulletActive = false;
