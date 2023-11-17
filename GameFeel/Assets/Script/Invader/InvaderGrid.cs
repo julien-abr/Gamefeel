@@ -33,6 +33,10 @@ public class InvaderGrid : MonoBehaviour
 
     private Vector3 _direction = Vector2.right;
 
+    [SerializeField] private Vector3 _gauche;
+    [SerializeField] private Vector3 _droite;
+
+
     [Inject] private UpdateBehaviour _uB;
     [SerializeField] private InputFX _OnInvaderSpawn;
     [SerializeField] private InputFX _OnEnemyTransfomationDeath;
@@ -80,8 +84,8 @@ public class InvaderGrid : MonoBehaviour
 
         this.transform.position += _direction * this.speed.Evaluate(this.percentKilled) * Time.deltaTime;
 
-        Vector3 leftEdge = Camera.main.ViewportToWorldPoint(Vector3.zero);
-        Vector3 rightEdge = Camera.main.ViewportToWorldPoint(Vector3.right);
+        Vector3 leftEdge = _gauche;
+        Vector3 rightEdge = _droite;
 
         foreach(Transform invader in this.transform)
         {
