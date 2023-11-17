@@ -56,9 +56,9 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _WindInfluenceMask: 4
-    - _WindScale: 1.29
-    - _WindSpeed: 0.54
+    - _WindInfluenceMask: 0
+    - _WindScale: 0.8
+    - _WindSpeed: 0.3
     - _WindStrenght: 0.5
     m_Colors:
     - _WindDirection: {r: 1.11, g: 0, b: 0, a: 0}
