@@ -12,5 +12,6 @@ public enum SoundState
     DAMAGE,
     MUSIC,
     SHOOT,
-    IMPACT
+    IMPACT,
+    SOUNDTRACK
 }
