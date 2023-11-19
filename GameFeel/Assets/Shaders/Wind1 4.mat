@@ -57,7 +57,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _WindInfluenceMask: 0
-    - _WindScale: 0.8
+    - _WindScale: 0.4
     - _WindSpeed: 0.3
     - _WindStrenght: 0.5
     m_Colors:
